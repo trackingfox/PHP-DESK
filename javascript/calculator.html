@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>abc</title>
+</head>
+<body>
+
+	<form>
+        enter a:<input type="text" id="f11"><br>
+        enter b:<input type="text" id="f12"><br>
+    <script type="text/javascript">    
+        document.write("1.Sum"+"<br/>");
+        document.write("2.Sub"+"<br/>");
+        document.write("3.Multiply"+"<br/>");
+        document.write("4.Division"+"<br/>");
+    </script>    
+
+        enter choice:<input type="text" id="choice"><br>
+        <input type="submit" name="submit" value="submit" onclick="calculate()">
+
+   </form>
+<script type="text/javascript">
+ function calculate()
+ {
+    a=parseInt(document.getElementById("f11").value);
+    b=parseInt(document.getElementById("f12").value);
+    ch=document.getElementById("choice").value;
+
+   switch(ch)
+   {
+    case '1': document.write("the sum is:"+(a+b));
+              break;
+    case '2': document.write("the sub is:"+(a-b));
+              break;
+    case '3': document.write("the multiplication is:"+(a*b));
+              break;
+    case '4': document.write("the division is:"+(a/b));
+              break;
+    default: alert("wrong input"); 
+              break;            
+   }
+ }  
+  </script> 
+
+
+</body>
+</html>

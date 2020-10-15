@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>abc</title>
+</head>
+<body>
+
+	<form name="f1">
+		enter a:<input type="text" name="f11"><br/>
+        <input type="submit" name="submit" value="submit" onclick="prime()">
+
+    </form>
+    <script type="text/javascript">
+        function prime()
+       {
+          a=parseInt(document.f1.f11.value);
+          //document.write(a);
+       
+       flag=0;
+       for(i=1;i<a;i++)
+		{
+				if(a%i==0)
+					flag=flag+1;
+				else
+					break;				
+		} 
+       
+
+       if(flag==1)
+       	  document.write(a+" is  prime number"); 
+       else
+          document.write(a+" is  not prime number"); 
+
+                
+       
+    }  
+
+   </script> 
+
+</body>
+</html>

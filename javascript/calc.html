@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>abc</title>
+</head>
+<body>
+
+	<form>
+        enter a:<input type="text" id="f11"><br>
+        enter b:<input type="text" id="f12"><br>
+        enter operator(+,-,*,/):<input type="text" id="operator"><br>
+        <input type="submit" name="submit" value="submit" onclick="fun()">
+
+   </form>
+<script type="text/javascript">
+ function fun()
+ {
+    a=parseInt(document.getElementById("f11").value);
+    b=parseInt(document.getElementById("f12").value);
+    op=document.getElementById("operator").value;
+   switch(op)
+   {
+    case '+': document.write("the sum is:"+(a+b));
+              break;
+    case '-': document.write("the sub is:"+(a-b));
+              break;
+    case '*': document.write("the mult is:"+(a*b));
+              break;
+    case '/': document.write("the div is:"+(a/b));
+              break;
+    default: alert("wrong input"); 
+              break;            
+   }
+ }  
+  </script> 
+
+
+</body>
+</html>

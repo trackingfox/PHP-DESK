@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>abc</title>
+</head>
+<body>
+
+	<form name="f1">
+		enter a:<input type="text" name="f11"><br>
+        enter b:<input type="text" name="f12"><br>
+        enter c:<input type="text" name="f13"><br>
+
+        <input type="submit" name="submit" value="submit" onclick="fun()">
+
+    </form>
+     <script type="text/javascript">
+        function fun()
+       {
+          a=parseInt(document.f1.f11.value);
+          b=parseInt(document.f1.f12.value);
+          c=parseInt(document.f1.f13.value);
+          
+
+		if(a>b && a>c)
+		{
+            document.write(" biggest no is"+a+"<br>");
+		}
+		if(b>a && b>c)
+		{
+			 document.write("biggest no is"+b+"<br>");
+		}
+		if(c>a && c>b)
+		{
+			document.write("biggest no is"+c+"<br");
+		}
+		if(a<b && a<c)
+		{
+            document.write(" smallest no is "+a+"<br>");
+		}
+		if(b<a && b<c)
+		{
+			 document.write("smallest no is "+b+"<br>");
+		}
+		if(c<a && c<b)
+		{
+			document.write("smallest no is "+c+"<br>");
+		}
+     
+
+     }	
+
+
+</script>
+
+</body>
+</html>

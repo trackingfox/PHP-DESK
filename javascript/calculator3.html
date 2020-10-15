@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>a1</title>
+</head>
+<body>
+<form name="f1">
+enter a: <input type="text" id="f11"><br>
+enter b: <input type="text" id="f12"><br>
+operator: 
+<input type="radio" name="op" value="sum">sum
+<input type="radio" name="op" value="sub">sub
+<input type="radio" name="op" value="mult">mult
+<input type="radio" name="op" value="div">div<br>
+<input type="submit" id="Submit" value="Submit" onclick="fun()">
+<script type="text/javascript">
+function fun()
+{
+a= parseInt(document.getElementById("f11").value);
+b= parseInt(document.getElementById("f12").value);
+operator=document.f1.op.value;
+//document.write(a,b,operator);
+switch(operator)
+{
+case 'sum' : document.write("the sum is:"+(a+b));
+  break;
+case 'sub' : document.write("the sub is:"+(a-b));
+  break;
+case 'mult' : document.write("the mult is:"+(a*b));
+  break;
+case 'div' : document.write("the div is:"+(a/b));
+  break;
+default:   alert("Wrong Input");
+break;
+
+}
+}
+</script>
+</form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>abc</title>
+</head>
+<body>
+
+	<form action="thanks.html" onsubmit="return fun()">
+	<h1>Mobile Validation</h1>
+
+	enter mobile no:<input type="text" id="mobile"><br>
+	<span id="s1"></span><br>
+	<input type="submit" name="submit" value="submit">
+</form>
+
+<script type="text/javascript">
+	
+
+	function fun()
+	{
+		var a=document.getElementById("mobile").value;
+		if(a=="")
+		{
+			document.getElementById("s1").innerHTML="**please enter your mobile number";
+			document.getElementById("s1").style.color="red";
+			return false;
+
+		}
+
+		if(a.length<10)
+		{
+			document.getElementById("s1").innerHTML="**please enter 10 digit mobile number";
+			document.getElementById("s1").style.color="red";
+			return false;
+
+		}
+		if(a.length>10)
+		{
+			document.getElementById("s1").innerHTML="**please enter 10 digit mobile number";
+			document.getElementById("s1").style.color="red";
+			return false;
+
+		}
+
+		if(isNaN(a))
+		{
+			document.getElementById("s1").innerHTML="**please enter only number";
+			document.getElementById("s1").style.color="red";
+			return false;
+
+		}
+
+		if(a.charAt(0)!=9 && a.charAt(0)!=8 && a.charAt(0)!=7)
+		{
+			document.getElementById("s1").innerHTML="**please enter only required number";
+			document.getElementById("s1").style.color="red";
+			return false;
+
+		}
+
+		else
+		{
+			document.getElementById("s1").innerHTML="**successful";
+			document.getElementById("s1").style.color="green";
+			return true;
+		}
+
+
+	}
+	</script>	
+
+</body>
+</html>

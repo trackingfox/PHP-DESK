@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>abc</title>
+</head>
+<body>
+
+
+	<form>
+        enter a:<input type="text" id="f11"><br>
+        enter b:<input type="text" id="f12"><br>
+        <br><br>
+       
+     <input type="submit" name="sum" value="sum" onclick="calculate1()">
+     <input type="submit" name="sub" value="sub" onclick="calculate2()">
+     <input type="submit" name="mult" value="mult" onclick="calculate3()">
+     <input type="submit" name="div" value="div" onclick="calculate4()">
+
+
+   </form>
+
+<script type="text/javascript">
+ function calculate1()
+ {
+
+    a=parseInt(document.getElementById("f11").value);
+    b=parseInt(document.getElementById("f12").value);
+    document.write("the sum is:"+(a+b));
+
+}
+ function calculate2()
+ {
+
+    a=parseInt(document.getElementById("f11").value);
+    b=parseInt(document.getElementById("f12").value);
+    document.write("the sub is:"+(a-b));
+
+}
+
+ function calculate3()
+ {
+
+    a=parseInt(document.getElementById("f11").value);
+    b=parseInt(document.getElementById("f12").value);
+    document.write("the mult is:"+(a*b));
+
+}
+ function calculate4()
+ {
+
+    a=parseInt(document.getElementById("f11").value);
+    b=parseInt(document.getElementById("f12").value);
+    document.write("the div is:"+(a/b));
+
+}
+
+  
+ 
+  </script> 
+
+</body>
+</html>
+
+</body>
+</html>

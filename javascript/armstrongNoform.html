@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>abc</title>
+</head>
+<body>
+
+
+	<form name="f1">
+		enter n:<input type="text" name="f11"><br/>
+        <input type="submit" name="submit" value="submit" onclick="armstrong()">
+
+    </form>
+    <script type="text/javascript">
+        function armstrong()
+       {
+          n=parseInt(document.f1.f11.value);
+          //document.write(a);
+          a=0;
+          c=0;
+          temp=n;
+          while(n>0)  
+    	 {  
+    		a=n%10;  
+    		n=parseInt(n/10);  
+    		c=c+(a*a*a);  
+    	 }  
+    	 if(temp==c)  
+    		document.write("armstrong number");   
+    	 else  
+        	document.write("Not armstrong number");   
+              
+       }  
+
+   </script> 
+
+</body>
+</html>
