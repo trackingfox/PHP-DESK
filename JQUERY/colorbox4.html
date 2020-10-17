@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>abc</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body id="s2">
+
+enter color:<select id="s1">
+		             <option>Select</option>
+		             <option>RED</option>
+		             <option>BLUE</option>
+		       		 <option>GREEN</option>
+		       		 <option>YELLOW</option>
+		       	     <option>BLACK</option>
+		       	     <option>OTHERS</option>
+		   	     </select><br>
+
+<div id="others"> </div>
+
+
+<script type="text/javascript">
+$("document").ready(function(){
+	$("#s1").change(function(){
+		var color = $("#s1").val();
+		if(color!="OTHERS"){
+		$("#s2").css("background-color",color);
+	    }
+		if(color=="OTHERS"){
+			$("#others").append("<input type='text' id='textbox'>");
+		}
+		$("#textbox").keyup(function(){
+		var color1=$("#textbox").val();
+		$("#s2").css("background-color",color1);
+});
+});	
+});
+</script>
+
+</body>
+</html>

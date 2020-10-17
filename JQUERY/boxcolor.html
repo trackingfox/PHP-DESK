@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>abc</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+enter color:<select id="color">
+		             <option>Select</option>
+		             <option id="red">RED</option>
+		             <option id="blue">BLUE</option>
+		       		 <option id="green">GREEN</option>
+		       		 <option id="yellow">YELLOW</option>
+		       	     <option id="black">BLACK</option>
+		   	     </select><br>
+<script type="text/javascript">
+$("document").ready(function(){
+
+	$("#color").focus(function(){
+		$(this).css("background-color","red");
+	});
+	$("select").focus(function(){
+		$(this).css("background-color","blue");
+	});
+	$("select").focus(function(){
+		$(this).css("background-color","green");
+	});
+	$("select").focus(function(){
+		$(this).css("background-color","black");
+	});
+	$("select").focus(function(){
+		$(this).css("background-color","yellow");
+	});
+	
+});	
+</script>
+
+</body>
+</html>

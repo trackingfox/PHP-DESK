@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>abc</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<form action="thanks.html" onsubmit="return function()">
+	<h1>Mobile Validation</h1>
+
+	enter mobile no:<input type="text" id="mobile"><br>
+	
+	<input type="submit" id="validate" value="click to validate">
+
+</form>
+<div id="showerror"> </div>
+
+<script type="text/javascript">
+	$("document").ready(function(){
+		$("#validate").click(function(){
+		var user=$("#mobile").val();
+		if(user==""){
+			$("#showerror").html("**The mobile number must be filled");
+			$("#showerror").css('color','red');
+			return false;
+		}
+		if(user.length<10 || user.length>10){
+			$("#showerror").html("**The mobile number must be 10 digit");
+			$("#showerror").css('color','red');
+			return false;
+		}
+		if(isNaN(user)){
+			$("#showerror").html("**please enter only number");
+			$("#showerror").css('color','red');
+			return false;
+		}
+		else{
+			$("#showerror").html("**successful");
+			$("#showerror").css('color','green');
+			return true;
+		}
+
+
+	});
+		
+});
+	
+</script>	
+
+</body>
+</html>

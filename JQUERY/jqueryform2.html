@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>abc</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+enter mobile:<input type="text" id="name"><br>
+
+
+Course :<select id="course">
+		             <option>Select</option>
+		             <option>Mtech</option>
+		             <option>Btech</option>
+		       		 <option>Bsc</option>
+		       		 <option>B.A</option>
+		       	     <option>BCA</option>
+		   	     </select><br>
+Phone :<input type="text" id="phone"><br>
+
+<input type="submit" id="submit" value="submit">
+<script type="text/javascript">
+	$("document").ready(function(){
+		$("#submit").click(function(){
+			var n=$("#name").val();
+			var a=$("#address").val();
+			var b=$("#email").val();
+			var c=$("#pass").val();
+			var d=$("#course").val();
+			var e=$("#phone").val();
+			document.write(n+"<br>");
+			document.write(a+"<br>");
+			document.write(b+"<br>");
+			document.write(c+"<br>");
+			document.write(d+"<br>");
+			document.write(e+"<br>");		
+		});
+	});
+</script>
+</body>
+</html>
