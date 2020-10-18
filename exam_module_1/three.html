@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>abc</title>
+</head>
+<body>
+
+
+	<form  action="thanks.html" onsubmit="return fun()">
+
+		<table border="2" cellpadding="1" cellspacing="0">
+			<tr>
+				<td colspan="2"
+				><h1><center>Registration Form</center></h1></td>
+			</tr>
+			<tr>
+				<td>Enter any name:</td>
+				<td><input type="text" id="name"></td>
+			</tr>
+			
+			
+			<tr>
+				<td>enter email:</td>
+				<td><input type="email" id="myemail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="enter email" required> 
+				</td>
+			</tr>
+			
+			<tr>
+				<td>enter Mobile no:</td>
+				<td><input type="text" id="mobile"></td>
+			</tr>
+			<span id="s1"></span>
+			
+			<tr>
+				<td>enter Date of Birth:</td>
+				<td><input type="date" id="dob"></td>
+			</tr>
+			
+			
+			<tr>
+				<td>Location:</td>
+				<td><select id="location">
+		             <option>Select</option>
+		             <option>Delhi</option>
+		             <option>Kolkata</option>
+		       		 <option>Mumbai</option>
+		       		 <option>Durgapur</option>
+		       	     <option>Chennai</option>
+		       	     <option>Bangalore</option>
+		   	     </select></td>
+			</tr>
+			
+			<tr>
+				<td> <input type="submit" name="submit" value="submit"></td>
+				
+			</tr>
+
+			
+
+
+		</table>
+		
+	</form>
+
+
+
+<script type="text/javascript">
+	
+
+	function fun()
+	{
+		var a=document.getElementById("mobile").value;
+		var e=document.getElementById("dob").value;
+		var i=document.getElementById("myemail").pattern;
+		var c=document.getElementById("name").value;
+		var f=document.getElementById("location").value;
+		
+		if(c=="")
+		{
+			document.getElementById("s1").innerHTML="**please enter your name";
+			document.getElementById("s1").style.color="red";
+			return false;
+
+		}
+
+		
+		if(i=="")
+		{
+			document.getElementById("s1").innerHTML="**please enter your email";
+			document.getElementById("s1").style.color="red";
+			return false;
+
+		}
+
+		
+		if(a=="")
+		{
+			document.getElementById("s1").innerHTML="**please enter your mobile number";
+			document.getElementById("s1").style.color="red";
+			return false;
+
+		}
+
+		if(a.length<10||a.length>10)
+		{
+		   document.getElementById("s1").innerHTML="**please enter 10 digit mobile number";
+			document.getElementById("s1").style.color="red";
+			return false;
+
+		}
+		
+		
+		if(e=="")
+		{
+			document.getElementById("s1").innerHTML="**please enter your DOB";
+			document.getElementById("s1").style.color="red";
+			return false;
+
+		}
+
+		
+		
+		if(f=="")
+		{
+			document.getElementById("s1").innerHTML="**please select your location";
+			document.getElementById("s1").style.color="red";
+			return false;
+
+		}
+
+		
+		 else
+		{
+			document.getElementById("s1").innerHTML="**successful";
+			document.getElementById("s1").style.color="green";
+			return true;
+		}
+
+	}
+	</script>
+
+</body>
+</html>
